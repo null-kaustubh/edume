@@ -1,19 +1,14 @@
-require("dotenv").config();
 const express = require("express");
 const { userRouter } = require("./routes/user");
 const { courseRouter } = require("./routes/course");
+const { adminRouter } = require("./routes/admin");
 
 const app = express();
 const port = 3000;
 
-app.use("/user", userRouter);
-app.use("/course", courseRouter);
-
-app.post("/admin/signup", function (req, res) {});
-app.post("/admin/login", function (req, res) {});
-app.post("/admin/create-course", function (req, res) {});
-app.post("/admin/add-course-content", function (req, res) {});
-app.delete("/admin/delete-course", function (req, res) {});
+app.use("/api/v1/user", userRouter);
+app.use("/api/v1/course", courseRouter);
+app.use("/api/v1/admin", adminRouter);
 
 app.listen(port, function () {
   console.log(`Server running on port ${port}`);
