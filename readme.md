@@ -1,4 +1,4 @@
-# Course Selling App - Backend
+# Edume Course Selling App - Backend
 
 A backend API for a course selling platform built to practice API design and advanced authentication concepts. This project focuses on user management, course creation, and purchase workflows.
 
@@ -23,8 +23,8 @@ A backend API for a course selling platform built to practice API design and adv
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/course-selling-backend.git
-   cd course-selling-backend
+   git clone https://github.com/null-kaustubh/edume.git
+   cd edume
    ```
 
 2. **Install dependencies**
@@ -43,13 +43,14 @@ A backend API for a course selling platform built to practice API design and adv
 
    ```env
    PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/course-selling
-   JWT_SECRET=your-jwt-secret
+   MONGODB_CONNECT_URL=mongodb://localhost:27017/course-selling
+   JWT_SECRET_ADMIN=your-admin-jwt-secret
+   JWT_SECRET_USER=your-user-jwt-secret
    ```
 
 4. **Start the server**
    ```bash
-   npm run dev
+   nodemon index.js
    ```
 
 ## 📚 API Endpoints
